@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "web",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "My new portfolio",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Darian Lio <darianlio97@gmail.com>",
   "dependencies": {
     "gatsby": "^2.17.6",
     "gatsby-image": "^2.2.30",
@@ -35,7 +35,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/darianlio/darian-web"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
