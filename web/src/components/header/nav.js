@@ -8,7 +8,7 @@ class Nav extends React.Component {
     }
 
     listenScrollEvent = e => {
-        if (window.scrollY > 400) {
+        if (window.scrollY > 715) {
             this.setState({color: 'black'})
         } else {
             this.setState({color: 'white'})

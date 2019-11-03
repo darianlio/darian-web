@@ -7,7 +7,7 @@ class SocialMedia extends React.Component {
     }
 
     listenScrollEvent = e => {
-        if (window.scrollY > 400) {
+        if (window.scrollY > 250) {
             this.setState({color: 'black'})
         } else {
             this.setState({color: 'white'})

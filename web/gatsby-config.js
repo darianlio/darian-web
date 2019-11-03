@@ -34,7 +34,7 @@ module.exports = {
           families: ['Open+Sans'],
         },
         typekit: {
-          id: '14032'
+          id: 'fgw7kgu'
         }
       },
     },

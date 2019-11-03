@@ -1,4 +1,16 @@
 .about-container {
     max-width: 960px;
-    padding: 500px 0;
+    padding: 150px 0;
+    margin: 0 auto;
+
+    h1 {
+        font-size: 2em;
+        letter-spacing: 0.1em;
+    }
+
+    p {
+        line-height: 1.8em;
+        letter-spacing: 0.05em;
+        font-size: 1em;
+    }
 }
