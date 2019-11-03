@@ -18,7 +18,7 @@ class Layout extends Component {
     }
 
     listenScrollEvent = e => {
-        if (window.scrollY > 450) {
+        if (window.scrollY > 400) {
             this.setState({backgroundColor: 'black'})
         } else {
             this.setState({backgroundColor: 'white'})
@@ -56,11 +56,11 @@ class Layout extends Component {
             <div id="root" onMouseMove = {e => this.handleMouseMove(e)}>
                 <div className='cursors'>
                     <div className='cursor' style={{left: xMain, top: yMain, backgroundColor: this.state.backgroundColor}}/>
-                    <div className='cursor'style={{ left: xTrailing, top: yTrailing}}/>
+                    <div className='cursor' style={{ left: xTrailing, top: yTrailing}}/>
                 </div>
                 <Head/>
                 <Header/>
-                <main>
+                <main> 
                     <Hero/>
                     <About/>
                     <Experience/>
