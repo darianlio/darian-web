@@ -1,4 +1,5 @@
 #hero {
+    background-color: black;
     #hero-image {
         height: 100vh;
         width: 100%;
@@ -13,6 +14,7 @@
         top: 80%;
         left: 25%;
         z-index: 5;
+        color: white;
         #hero-title {
             font-size: 25px;
             font-weight: 600;
