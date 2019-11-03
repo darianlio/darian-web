@@ -26,8 +26,8 @@ const Nav = () => (
                 </li>
             </ul>
         </nav>
-        <div id="logo">
-            <Link to="/">
+        <Link to="/">
+            <div id="logo">  
                 <span>L</span>
                 <span class="logo-left">D</span>
                 <br/>
@@ -42,8 +42,8 @@ const Nav = () => (
                 <span class="logo-dar-2">A</span>
                 <br/>
                 <span class="logo-dar-2">N</span>
-            </Link>
-        </div>
+            </div>
+        </Link>
     </div>
 )
 
