@@ -2,7 +2,7 @@ import React from 'react'
 import "../../styles/hero/hero.scss"
 
 const Hero = () => (
-    <div id="hero">
+    <section id="hero">
         <div id="hero-image"/>
         <div id="hero-wrap">
             <div id="hero-title">
@@ -12,7 +12,7 @@ const Hero = () => (
                 TORONTO, CANADA
             </div>
         </div>
-    </div>
+    </section>
 )
 
 export default Hero

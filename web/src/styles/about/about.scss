@@ -8,7 +8,7 @@
         display: grid;
         grid-template-rows: 1f 1fr 1fr 1fr 1fr 2fr 1fr 1fr;
                         //1    2   3   4   5   6   7    8
-        grid-template-columns: 1.5fr 1fr 1fr 1fr 1.5fr;
+        grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
                             //1     2   3   4   5     6
         grid-row-gap: 0px;
         .about-image {
@@ -18,14 +18,16 @@
         }
 
         .about-title { 
+            font-family: "Lato", sans-serif;
+            font-weight: 700;
             height: 100%;
             text-align: center;
             grid-row: 1/2;
             z-index: 2;
-            grid-column: 2/5;
+            grid-column: 3/5;
             margin-bottom: 0.5em;
-            font-size: 3em;
-            letter-spacing: 0.05em;
+            font-size: 2.5em;
+            letter-spacing: 0.04em;
             #about-header {
                 font-size: 0.5em!important;
                 display: block;
@@ -42,8 +44,36 @@
             background-color: rgb(202, 202, 202);
         }
 
+        .about-captions {
+            font-size: 5em;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            font-family: "Bebas Neue W05 Regular", sans-serif;
+        }
+
+        .cap1 {
+            grid-column: 5/6;   
+            grid-row: 3;
+            transform: rotate(90deg);
+        }
+
+        .cap2 {
+            grid-column: 1/2;   
+            grid-row: 5;
+            transform: rotate(-90deg);
+        }
+
+        .cap3 {
+            grid-column: 5/6;   
+            grid-row: 7/8;
+            transform: rotate(90deg);
+            margin-right: 125px;
+        }
+
         .about-para {
             letter-spacing: 0.05em;
+            background-color: rgba(238, 238, 238, 0.8);
+            padding: 20px;
             h1 {
                 font-size: 0.9em;
                 margin-bottom: 20px;

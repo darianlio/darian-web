@@ -24,21 +24,53 @@ html {
     }
 }
 
-.cursor {
-    position: fixed;
-    height: 7px;
-    width: 7px;
-    border-radius: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    pointer-events:none;
+@font-face{
+    font-family:"Bebas Neue W05 Regular";
+        src:url("../../assets/fonts/5352060/709c70fd-1848-49ce-b445-711a3c94b457.eot");
+        src:url("../../assets/fonts/5352060/709c70fd-1848-49ce-b445-711a3c94b457.eot") format("eot"),url("../../assets/fonts/5352060/fa68ccae-ed18-43fd-92a3-829fc903f139.woff2") format("woff2"),url("../../assets/fonts/5352060/3a408821-3189-48af-8229-0dd70b3ae13e.woff") format("woff"),url("../../assets/fonts/5352060/acfd00fe-2a3e-4bf4-819e-3decd31aeb04.ttf") format("truetype");
 }
 
-.cursors .cursor:nth-child(1) {
-    z-index: 100002;
+.cursor1 {
+    width: 7px;
+    height: 7px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
 }
-.cursors .cursor:nth-child(2) {
-    background-color: rgba(213, 109, 139, 0.7);
-    z-index: 100001;
-    height: 20px;
+
+.cursor2 {
     width: 20px;
+    height: 20px;
+    background-color: rgba(168, 78, 113, 0.7);
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;;
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0.4);
+    }
+}
+
+.expand {
+    animation: cursorAnim3 1s forwards;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;;
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    } 
+    100% {
+        transform: scale(3);
+        opacity: 0.5;
+    }
 }

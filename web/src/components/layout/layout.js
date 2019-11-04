@@ -6,58 +6,35 @@ import About from "../about/about"
 import Experience from "../experience/experience"
 import SocialMedia from "../socialmedia/socialmedia"
 import Footer from "../footer/footer"
+import ReactFullpage from '@fullpage/react-fullpage';
 import "../../styles/layout/layout.scss"
 
 class Layout extends Component {
-    state = {
-        xMain: 0,
-        yMain: 0,
-        xTrailing: 0,
-        yTrailing: 0,
-        backgroundColor: 'white'
-    }
-
-    listenScrollEvent = e => {
-        if (window.scrollY > 400) {
-            this.setState({backgroundColor: 'black'})
-        } else {
-            this.setState({backgroundColor: 'white'})
-        }
-    }
-
-    handleMouseMove = (e) => {
-        const { clientX, clientY } = e;
-        this.setState({
-            xMain: clientX,
-            yMain: clientY,
-        }, () => {
-            setTimeout(() => {
-                this.setState({
-                    xTrailing: clientX,
-                    yTrailing: clientY,
-                })
-            }, 150)
-        })
-    }
 
     componentDidMount() {
         window.addEventListener('scroll', this.listenScrollEvent)
+        const cursor = document.querySelector('.cursor1');
+        document.addEventListener('mousemove', e => {
+            cursor.setAttribute("style", "top: " + (e.pageY-5)+"px; left:" + (e.pageX-5) + "px;")
+        })
+        const cursor2 = document.querySelector('.cursor2');
+        document.addEventListener('mousemove', e => {
+            cursor2.setAttribute("style", "top: " + (e.pageY - 11)+"px; left:" + (e.pageX - 11) + "px;")
+        })
+        document.addEventListener('mouseover', e => {
+            if (e.target.tagName.toLowerCase() === 'a' || e.target.tagName.toLowerCase() === 'i' || e.target.tagName.toLowerCase() === 'span') {
+                cursor2.classList.add("expand");
+            } else {
+                cursor2.classList.remove("expand");
+            }
+        })
     }
 
     render = () => {
-        const {
-            xMain,
-            yMain,
-            xTrailing,
-            yTrailing,
-        } = this.state
-
         return (
-            <div id="root" onMouseMove = {e => this.handleMouseMove(e)}>
-                <div className='cursors'>
-                    <div className='cursor' style={{left: xMain, top: yMain, backgroundColor: this.state.backgroundColor}}/>
-                    <div className='cursor' id='cursor2' style={{ left: xTrailing, top: yTrailing}}/>
-                </div>
+            <div id="root">
+                <div className="cursor1"></div>
+                <div className="cursor2"></div>
                 <Head/>
                 <Header/>
                 <main>
