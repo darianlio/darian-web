@@ -56,11 +56,11 @@ class Layout extends Component {
             <div id="root" onMouseMove = {e => this.handleMouseMove(e)}>
                 <div className='cursors'>
                     <div className='cursor' style={{left: xMain, top: yMain, backgroundColor: this.state.backgroundColor}}/>
-                    <div className='cursor' style={{ left: xTrailing, top: yTrailing}}/>
+                    <div className='cursor' id='cursor2' style={{ left: xTrailing, top: yTrailing}}/>
                 </div>
                 <Head/>
                 <Header/>
-                <main> 
+                <main>
                     <Hero/>
                     <About/>
                     <Experience/>
