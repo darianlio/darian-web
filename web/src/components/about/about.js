@@ -9,9 +9,9 @@ class About extends Component {
             <StaticQuery
                 query = {graphql`
                     query {
-                        file(relativePath: { eq: "about.jpg" }) {
+                        file(relativePath: { eq: "kevin.png" }) {
                             childImageSharp {
-                                fluid(maxWidth: 400, maxHeight: 250) {
+                                fluid(maxWidth: 1000) {
                                 ...GatsbyImageSharpFluid
                                 }
                             }
@@ -20,13 +20,22 @@ class About extends Component {
                 `
                 }
             render = {data => (
-            <div class="about-container">
-                <Img fluid={data.file.childImageSharp.fluid} />
-                <h1 class="about-title">ABOUT MYSELF</h1>
-                <div class="about-text">
-                    <p>Hey there, I'm Darian. Interested in learning more? Born in Toronto, Canada, I am a twenty-two year old who is currently in his last year of study for Computer Engineering at Queen's University.</p>
-                    <p>From an early age, I have always been interested in everything that had to do with technology, design, and development. From building robots, playing games, to designing applications, my curiosity has only grown through the years. Recently, I had the pleasure to intern for IBM as a Software Developer. It was a great experience that has really helped improve my fundamental abilities for work! Now, I'm currently an upcoming software engineer at Amazon! Stay tuned!</p>
-                    <p>If I'm not working, I'm busy innovating a product in a hackathon, updating my website, or doing one of my hobbies. Some of my hobbies include photography, mechanical keyboards, playing the latest game on the Nintendo Switch or PC, basketball, guitar, or exercising at the gym.</p>
+            <div className="about-container">
+                <div className="about-grid">
+                    <Img className="about-image" fluid={data.file.childImageSharp.fluid} />
+                    <h1 className="about-title"><span>HELLO</span><br/> I'm Darian.</h1>
+                    <div className="about-para box1">
+                        <h1>Born in 1997</h1>
+                        <p>From an early age, I have always been interested in everything that had to do with technology! From creating robots, playing games, and building applications, my curiosity has only grown through out the years. My passion is in design and development!</p>
+                    </div>
+                    <div className="about-para box2">
+                        <h1>What am I doing currently?</h1>
+                        <p>Recently, I had the pleasure to intern at IBM as a software developer. Now, I am an upcoming software engineer at Amazon, so stay tuned!</p>
+                    </div>
+                    <div className="about-para box3">
+                        <h1>My current interests</h1>
+                        <p>If I'm not working, I'm busy innovating a product in a hackathon, updating my website, or doing one of my hobbies. Some of my hobbies include photography, mechanical keyboards, playing the latest game on the Nintendo Switch or PC, basketball, guitar, or exercising at the gym.</p>
+                    </div>
                 </div>
             </div>
             )}
