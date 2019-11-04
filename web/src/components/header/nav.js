@@ -31,9 +31,6 @@ class Nav extends React.Component {
                             <Link to="/">EXPERIENCE</Link>
                         </li>
                         <li>
-                            <Link to="/">EDUCATION</Link>
-                        </li>
-                        <li>
                             <Link to="/">PORTFOLIO</Link>
                         </li>
                         <li>
