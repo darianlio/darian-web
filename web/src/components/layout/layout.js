@@ -25,7 +25,9 @@ class Layout extends Component {
             if (e.target.tagName.toLowerCase() === 'a' || e.target.tagName.toLowerCase() === 'i' || e.target.tagName.toLowerCase() === 'span') {
                 cursor2.classList.add("expand");
             } else {
-                cursor2.classList.remove("expand");
+                setTimeout(() => {
+                    cursor2.classList.remove("expand");
+                });
             }
         })
     }
