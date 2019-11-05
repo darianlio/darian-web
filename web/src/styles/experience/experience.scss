@@ -1,6 +1,144 @@
 .experience-container {
-    max-width: 960px;
     padding: 150px 0;
-    margin: 0 auto;
+    background-color: rgb(252, 248, 248);
 
+    .title-box, .job-container {
+        max-width: 960px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .title-box {
+        h1 {
+            font-size: 4em;
+            font-family: "Bebas Neue W05 Regular", sans-serif;
+            letter-spacing: 1px;
+        }
+    }
+    .job-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 50px;
+        justify-items: center;
+        align-items: center;
+
+        .amazon {
+            background-color: rgb(15, 54, 90);
+            grid-column: 1/2;
+            grid-row: 1/3;
+
+            &:hover {
+                background-color: gray;
+            }
+        }
+
+        .ibm {
+            background-color: rgb(78, 195, 211);
+            grid-column: 2/3;
+            grid-row: 2/4;
+        }
+
+        .asi {
+            background-color: gray;
+            grid-column: 1/2;
+            grid-row: 3/6;
+        }
+        .box {
+            width: 100%;
+            height: 500px;
+
+            .amazon-images {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1.5fr 0.5fr;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                .amazon-img {
+                    grid-column: 1/3;
+                    grid-row: 1/3;
+                    z-index: 1;
+                    width: 80%;
+                    margin: 0 auto;
+                }
+
+                .cart {
+                    grid-column: 1/2;
+                    grid-row: 1;
+                    width: 50%;
+                    margin: 0 auto;
+                    transform: rotate(-30deg);
+                    transition: 0.5s ease;
+                }
+
+                .prime {
+                    grid-column: 2/3;
+                    grid-row: 2;
+                    width: 40%;
+                    margin-left: auto;
+                    margin-right: 40px;
+                    transform: rotate(-40deg);
+                }
+            }
+
+            .ibm-images {
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1.5fr 0.5fr;
+                justify-content: center;
+                align-items: center;
+
+                .ibm-img {
+                    grid-column: 1/3;
+                    grid-row: 1;
+                }
+
+                .cloud {
+
+                }
+
+                .bluemix {
+
+                }
+            }
+
+            .asi-images {
+                width: 100%;
+                height: 100%;
+            }
+
+            .caption {
+                width: 100%;
+                background-color: white;
+                bottom: 0;
+                letter-spacing: 0.04em;
+                z-index: 1;
+                h1, h2, h3, .preview-btn {
+                    margin-left: 20px;
+                }
+
+                h1 {
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                    font-size: 1.5em;
+                }
+
+                h2 {
+                    margin-bottom: 5px;
+                    font-size: 1em;
+                }
+
+                h3 {
+                    font-size: 0.9em;
+                }
+
+                .preview-btn {
+                    padding: 20px 0;
+                }
+            }
+        }
+    }
 }

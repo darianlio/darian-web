@@ -12,7 +12,6 @@ import "../../styles/layout/layout.scss"
 class Layout extends Component {
 
     componentDidMount() {
-        window.addEventListener('scroll', this.listenScrollEvent)
         const cursor = document.querySelector('.cursor1');
         document.addEventListener('mousemove', e => {
             cursor.setAttribute("style", "top: " + (e.pageY-5)+"px; left:" + (e.pageX-5) + "px;")
@@ -23,30 +22,36 @@ class Layout extends Component {
         })
         document.addEventListener('mouseover', e => {
             if (e.target.tagName.toLowerCase() === 'a' || e.target.tagName.toLowerCase() === 'i' || e.target.tagName.toLowerCase() === 'span') {
-                cursor2.classList.add("expand");
+                if (!cursor2.classList.contains("expand")) {
+                    cursor2.classList.add("expand");
+                }
             } else {
-                setTimeout(() => {
-                    cursor2.classList.remove("expand");
-                });
+                if (cursor2.classList.contains("expand")){
+                    setTimeout(() => {
+                        cursor2.classList.remove("expand");
+                    });
+                }
             }
         })
     }
 
     render = () => {
         return (
-            <div id="root">
+            <section>
                 <div className="cursor1"></div>
                 <div className="cursor2"></div>
-                <Head/>
-                <Header/>
-                <main>
-                    <Hero/>
-                    <About/>
-                    <Experience/>
-                </main>
-                <SocialMedia/>
-                <Footer/>
-            </div>
+                <div>
+                    <Head/>
+                    <Header/>
+                    <main>
+                        <Hero/>
+                        <About/>
+                        <Experience/>
+                    </main>
+                    <SocialMedia/>
+                    <Footer/>
+                </div>
+            </section>
         )
     }
 }

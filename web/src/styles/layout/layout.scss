@@ -1,5 +1,5 @@
 * {
-    cursor: none;
+    //cursor: none;
 }
 html {
     background-color: white;
@@ -10,7 +10,7 @@ html {
     body {
         margin: 0;
         padding: 0;
-        font-family: "aktiv-grotesk-std",sans-serif;
+        font-family: "helvetica",sans-serif;
         font-size: 100%;
     }
 
@@ -37,7 +37,7 @@ html {
     background-color: white;
     border-radius: 50%;
     position: absolute;
-    z-index: 2;
+    pointer-events: none;
 }
 
 .cursor2 {
@@ -47,20 +47,11 @@ html {
     border-radius: 50%;
     position: absolute;
     transition-duration: 200ms;
-    transition-timing-function: ease-out;;
-}
-
-@keyframes cursorAnim2 {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(0.4);
-    }
+    transition-timing-function: ease-out;
 }
 
 .expand {
-    animation: cursorAnim3 1s forwards;
+    animation: cursorAnim3 0.5s forwards;
     transition-duration: 200ms;
     transition-timing-function: ease-out;;
 }
