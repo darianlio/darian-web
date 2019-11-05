@@ -77,9 +77,13 @@ class Experience extends Component {
                     </div>
                     <div className="caption">
                         <h1>Amazon</h1>
-                        <h2>Software Engineer</h2>
-                        <h3>Upcoming 2020</h3>
-                        <div className="preview-btn">Preview</div>
+                        <h2>Software Engineer (Upcoming 2020)</h2>
+                        <button className="preview-btn">
+                            <div className="circle">
+                                <span className="icon arrow"></span>
+                            </div>
+                            <p className="preview-text">learn more</p>
+                        </button>
                     </div>
                 </div>
                 <div className="ibm box">
@@ -90,9 +94,13 @@ class Experience extends Component {
                     </div>
                     <div className="caption">
                         <h1>IBM</h1>
-                        <h2>Software Developer Intern</h2>
-                        <h3>May 2018 - Aug 2019</h3>
-                        <div className="preview-btn">Preview</div>
+                        <h2>Software Developer Intern (May 2018 - Aug 2019)</h2>
+                        <button className="preview-btn">
+                            <div className="circle">
+                                <span className="icon arrow"></span>
+                            </div>
+                            <p className="preview-text">learn more</p>
+                        </button>
                     </div>
                 </div>
                 <div className="asi box">
@@ -101,9 +109,13 @@ class Experience extends Component {
                     </div>
                     <div className="caption">
                         <h1>ASI</h1>
-                        <h2>Production Technician</h2>
-                        <h3>May 2017 - Aug 2017</h3>
-                        <div className="preview-btn">Preview</div> 
+                        <h2>Production Technician (May 2017 - Aug 2017)</h2>
+                        <button className="preview-btn">
+                            <div className="circle">
+                                <span className="icon arrow"></span>
+                            </div>
+                            <p className="preview-text">learn more</p>
+                        </button>
                     </div>
                 </div>
             </div>

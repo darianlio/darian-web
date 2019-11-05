@@ -1,5 +1,5 @@
 * {
-    //cursor: none;
+    cursor: none;
 }
 html {
     background-color: white;
@@ -38,16 +38,19 @@ html {
     border-radius: 50%;
     position: absolute;
     pointer-events: none;
+    z-index: 3;
 }
 
 .cursor2 {
     width: 20px;
     height: 20px;
-    background-color: rgba(168, 78, 113, 0.7);
+    background-color: rgba(235, 94, 148, 0.7);
     border-radius: 50%;
     position: absolute;
     transition-duration: 200ms;
     transition-timing-function: ease-out;
+    z-index: 2;
+    pointer-events: none;
 }
 
 .expand {
