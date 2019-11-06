@@ -4,6 +4,7 @@ import Header from "../header/header"
 import Hero from "../hero/hero"
 import About from "../about/about"
 import Experience from "../experience/experience"
+import Portfolio from "../portfolio/portfolio"
 import SocialMedia from "../socialmedia/socialmedia"
 import Footer from "../footer/footer"
 import ReactFullpage from '@fullpage/react-fullpage';
@@ -47,6 +48,7 @@ class Layout extends Component {
                         <Hero/>
                         <About/>
                         <Experience/>
+                        <Portfolio/>
                     </main>
                     <SocialMedia/>
                     <Footer/>

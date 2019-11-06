@@ -66,7 +66,7 @@ class Experience extends Component {
     render = {data => (
         <section class="experience-container">
             <div className="title-box">
-                <h1>Where I've Worked</h1>
+                <h1>experience.</h1>
             </div>
             <div className="job-container">
                 <div className="amazon box">

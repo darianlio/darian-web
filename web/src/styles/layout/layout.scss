@@ -24,6 +24,10 @@ html {
     }
 }
 
+::selection {
+    color: white;
+    background: black;
+}
 @font-face{
     font-family:"Bebas Neue W05 Regular";
         src:url("../../assets/fonts/5352060/709c70fd-1848-49ce-b445-711a3c94b457.eot");
@@ -64,7 +68,7 @@ html {
         transform: scale(1);
     } 
     100% {
-        transform: scale(3);
+        transform: scale(4);
         opacity: 0.5;
     }
 }
