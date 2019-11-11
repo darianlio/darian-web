@@ -8,6 +8,7 @@ nav {
     font-weight: 600;
     line-height: 20px;
     ul {
+        margin-top: 0;
         li {
             margin-bottom: 10px;
             a {
@@ -21,32 +22,5 @@ nav {
     position: fixed;
     top: 10%;
     left: 5%;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing:2px;
-    line-height: 20px; 
-
-    span {
-        display: inline-block;
-        width: 18px;
-    }
-}
-
-.logo-I {
-    padding-left: 2px;
-}
-
-.logo-left {
-    margin-left: 5px;
-}
-.logo-left-left {
-    margin-left: 3px;
-}
-
-.logo-dar {
-    margin-left: 25px;
-}
-
-.logo-dar-2 {
-    margin-left: 23px;
+    width: 2%;
 }

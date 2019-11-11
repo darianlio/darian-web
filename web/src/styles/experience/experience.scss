@@ -272,8 +272,8 @@
                     grid-row: 1;
                     width: 50%;
                     z-index: 2;
-                    top: 50%;
-                    left: 50%;
+                    top: 30%;
+                    left: 60%;
                     transition: 1s ease;
                 }
             }
@@ -291,7 +291,6 @@
                 .asi-img {
                     width: 80%;
                     margin: 0 auto;
-                    filter: drop-shadow(5px 5px 5px rgb(212, 212, 212));
                     transition: 1s ease;
                 }
             }

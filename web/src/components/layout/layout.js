@@ -22,7 +22,7 @@ class Layout extends Component {
             cursor2.setAttribute("style", "top: " + (e.pageY - 11)+"px; left:" + (e.pageX - 11) + "px;")
         })
         document.addEventListener('mouseover', e => {
-            if (e.target.tagName.toLowerCase() === 'a' || e.target.tagName.toLowerCase() === 'i' || e.target.tagName.toLowerCase() === 'span') {
+            if (e.target.tagName.toLowerCase() === 'a' || e.target.tagName.toLowerCase() === 'i' || e.target.tagName.toLowerCase() === 'img') {
                 if (!cursor2.classList.contains("expand")) {
                     cursor2.classList.add("expand");
                 }

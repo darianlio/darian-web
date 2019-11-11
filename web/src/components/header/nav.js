@@ -1,17 +1,22 @@
-import React from 'react'
-import { Link } from "gatsby"
+import React, { Component } from 'react'
+import { Link, StaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 import "../../styles/header/nav.scss"
 
-class Nav extends React.Component {
+class Nav extends Component {
     state = {
-        color: 'white'
+        color: 'white',
+        display: 'block'
     }
+
 
     listenScrollEvent = e => {
         if (window.scrollY > 715) {
             this.setState({color: 'black'})
+        } else if (window.scrollY > 625) {
+            this.setState({display: 'none'})
         } else {
-            this.setState({color: 'white'})
+            this.setState({color: 'white', display: 'block'})
         }
     }
 
@@ -21,6 +26,27 @@ class Nav extends React.Component {
 
     render() {
         return (
+            <StaticQuery
+            query = {graphql`
+                query {
+                    logo: file(relativePath: { eq: "logo.png" }) {
+                        childImageSharp {
+                            fluid(maxWidth: 1000) {
+                            ...GatsbyImageSharpFluid
+                            }
+                        }
+                    }
+                    logoBlack: file(relativePath: { eq: "logoblack.png" }) {
+                        childImageSharp {
+                            fluid(maxWidth: 1000) {
+                            ...GatsbyImageSharpFluid
+                            }
+                        }
+                    }
+                }
+                `
+            }
+            render = {data => (
             <div id="navbar" style={{color: this.state.color}}>
                 <nav>
                     <ul>
@@ -43,23 +69,15 @@ class Nav extends React.Component {
                 </nav>
                 <Link to="/">
                     <div id="logo">  
-                        <span>L</span>
-                        <span class="logo-left">D</span>
-                        <br/>
-                        <span class="logo-I">I</span>
-                        <span class="logo-left-left">A</span>
-                        <br/>
-                        <span>O</span>
-                        <span class="logo-left">R</span>
-                        <br/>
-                        <span class="logo-dar">I</span>
-                        <br/>
-                        <span class="logo-dar-2">A</span>
-                        <br/>
-                        <span class="logo-dar-2">N</span>
+                        <div className="container">
+                            <Img className="logo" fluid={data.logo.childImageSharp.fluid} style={{display: this.state.display}}/>
+                            <Img className="logoBlack" fluid={data.logoBlack.childImageSharp.fluid}/>
+                        </div>
                     </div>
                 </Link>
             </div>
+        )}
+        />
         )
     }
 }
